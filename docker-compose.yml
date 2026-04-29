@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  portfolio:
+    image: nginx:alpine
+    container_name: portfolio_site
+    ports:
+      - "80:80"
+    volumes:
+      - ./portfolio:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    restart: always
