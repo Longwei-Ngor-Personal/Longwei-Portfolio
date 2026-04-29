@@ -486,7 +486,109 @@
     filter: grayscale(15%) contrast(1.05);
     opacity: 0.9;
   }
+/* ===== MOBILE RESPONSIVE FIX ===== */
+@media (max-width: 768px) {
 
+  /* Global padding fix */
+  nav,
+  .hero,
+  section,
+  footer {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* NAV */
+  .nav-links {
+    display: none; /* simple fix for now */
+  }
+
+  /* HERO */
+  .hero {
+    padding-top: 6rem;
+    min-height: auto;
+  }
+
+  .hero-bg-text {
+    display: none;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .hero-meta {
+    text-align: left;
+  }
+
+  /* HERO IMAGE */
+  .hero-photo-wrap {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 2rem;
+  }
+
+  .hero-photo-wrap::after {
+    display: none;
+  }
+
+  .hero-photo {
+    object-fit: cover;
+  }
+
+  /* FOCUS GRID */
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* EXPERIENCE */
+  .exp-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .exp-tag {
+    margin-top: 0.5rem;
+  }
+
+  /* ACHIEVEMENTS */
+  .achieve-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* STATS */
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .contact-links {
+    width: 100%;
+  }
+
+  .contact-link {
+    gap: 1rem;
+  }
+
+  /* TYPOGRAPHY ADJUST */
+  body {
+    font-size: 14px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+}
 </style>
 </head>
 <body>
