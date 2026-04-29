@@ -1,0 +1,4 @@
+me.longweingor.dev {
+    root * /srv
+    file_server
+}
